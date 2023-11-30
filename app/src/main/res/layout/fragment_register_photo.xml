@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorOnPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="70dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fRegisterCivPhotoProfile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/photo_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fRegisterPhotoTxtTitle"
+                style="@style/Theme.Instagram.TextViewBase.Form"
+                android:text="@string/photo_register_title"
+                android:textColor="?colorPrimary"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fRegisterCivPhotoProfile" />
+
+            <TextView
+                android:id="@+id/fRegisterPhotoTxtSubtitle"
+                style="@style/Theme.Instagram.TextViewBase.Form"
+                android:layout_width="0dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/photo_register_subtitle"
+                android:textAlignment="center"
+                android:textColor="?colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fRegisterPhotoTxtTitle" />
+
+            <com.breno.instagram.common.view.LoadingButton
+                android:id="@+id/fRegisterPhotoButtonAddPhoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fRegisterPhotoTxtSubtitle"
+                app:textLoading="@string/add_photo" />
+
+            <Button
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fRegisterPhotoButtonAddPhoto"
+                android:text="@string/jump"
+                style="@style/Theme.Instagram.Link"
+                android:id="@+id/fRegisterPhotoBtnJump"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

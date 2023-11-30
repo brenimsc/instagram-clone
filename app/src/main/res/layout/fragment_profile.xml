@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fProfileCivImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_insta_profile_thin"
+                app:civ_border_color="@color/gray_border"
+                app:civ_border_width="1dp"
+                app:civ_circle_background_color="@color/gray_border"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fProfileCivMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_insta_add_profile"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="1dp"
+                app:civ_circle_background_color="@color/blue_enabled"
+                app:layout_constraintBottom_toBottomOf="@id/fProfileCivImage"
+                app:layout_constraintEnd_toEndOf="@id/fProfileCivImage" />
+
+            <TextView
+                android:id="@+id/fProfileTvQtdPublication"
+                style="@style/Theme.Instagram.TextViewProfile"
+                android:text="0"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/fProfileTvQtdFollowers"
+                app:layout_constraintStart_toEndOf="@id/fProfileCivImage"
+                app:layout_constraintTop_toTopOf="@id/fProfileCivImage" />
+
+            <TextView
+                android:id="@+id/fProfileTvQtdFollowers"
+                style="@style/Theme.Instagram.TextViewProfile"
+                android:text="0"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/fProfileTvQtdFollowing"
+                app:layout_constraintStart_toEndOf="@id/fProfileTvQtdPublication"
+                app:layout_constraintTop_toTopOf="@id/fProfileCivImage" />
+
+            <TextView
+                android:id="@+id/fProfileTvQtdFollowing"
+                style="@style/Theme.Instagram.TextViewProfile"
+                android:text="0"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fProfileTvQtdFollowers"
+                app:layout_constraintTop_toTopOf="@id/fProfileCivImage" />
+
+            <TextView
+                android:id="@+id/fProfileTvPublication"
+                style="@style/Theme.Instagram.TextViewProfile"
+                android:text="@string/posts"
+                app:layout_constraintEnd_toStartOf="@id/fProfileTvQtdFollowers"
+                app:layout_constraintStart_toEndOf="@id/fProfileCivImage"
+                app:layout_constraintTop_toBottomOf="@id/fProfileTvQtdPublication" />
+
+            <TextView
+                android:id="@+id/fProfileTvFollowers"
+                style="@style/Theme.Instagram.TextViewProfile"
+                android:text="@string/followers"
+                app:layout_constraintEnd_toStartOf="@id/fProfileTvQtdFollowing"
+                app:layout_constraintStart_toEndOf="@id/fProfileTvQtdPublication"
+                app:layout_constraintTop_toBottomOf="@id/fProfileTvQtdFollowers" />
+
+            <TextView
+                android:id="@+id/fProfileTvFollowing"
+                style="@style/Theme.Instagram.TextViewProfile"
+                android:text="@string/following"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fProfileTvQtdFollowers"
+                app:layout_constraintTop_toBottomOf="@id/fProfileTvQtdFollowing" />
+
+            <Button
+                android:id="@+id/fProfileBEditProfile"
+                style="@style/Theme.Instagram.Button.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/fProfileCivImage"
+                app:layout_constraintEnd_toEndOf="@id/fProfileTvFollowing"
+                app:layout_constraintStart_toStartOf="@id/fProfileTvPublication"
+                app:layout_constraintTop_toBottomOf="@id/fProfileTvFollowing" />
+
+            <TextView
+                android:id="@+id/fProfileTvUsername"
+                style="@style/Theme.Instagram.TextViewProfile"
+                android:layout_marginTop="32dp"
+                android:text="@string/username"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/fProfileCivImage"
+                app:layout_constraintTop_toBottomOf="@id/fProfileCivImage" />
+
+            <TextView
+                android:id="@+id/fProfileTvBio"
+                style="@style/Theme.Instagram.TextViewProfile"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/username"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="@id/fProfileTvFollowing"
+                app:layout_constraintStart_toStartOf="@id/fProfileCivImage"
+                app:layout_constraintTop_toBottomOf="@id/fProfileTvUsername"
+                tools:text="skskskskskkdkdkdkdkdkkdkdkdkkdkdkdkkdkdkddkdkdkskskskkskskskskksskskskskskkdkdkdkdkdkkdkdkdkkdkdkdkkdkdkddkdkdkskskskkskskskskksskskskskskkdkdkdkdkdkkdkdkdkkdkdkdkkdkdkddkdkdkskskskkskskskskksskskskskskkdkdkdkdkdkkdkdkdkkdkdkdkkdkdkddkdkdkskskskkskskskskksskskskskskkdkdkdkdkdkkdkdkdkkdkdkdkkdkdkddkdkdkskskskkskskskskksskskskskskkdkdkdkdkdkkdkdkdkkdkdkdkkdkdkddkdkdkskskskkskskskskksskskskskskkdkdkdkdkdkkdkdkdkkdkdkdkkdkdkddkdkdkskskskkskskskskks" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/fProfileBnvTabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/top_bottom_border"
+                app:labelVisibilityMode="unlabeled"
+                app:layout_constraintBottom_toTopOf="@id/fProfileRvPosts"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fProfileTvBio"
+                app:menu="@menu/menu_profile_bottom_nav" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fProfileRvPosts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fProfileBnvTabs" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/fProfilePbProgress"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/fProfileTvEmpty"
+        android:text="@string/empty_list"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

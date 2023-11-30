@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorOnPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/aLoginLogo"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:src="@drawable/instagram_logo_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/aLoginEditEmailLayout"
+                style="@style/Theme.Instagram.FormEditTextLayout"
+                android:layout_marginTop="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aLoginLogo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/aLoginEditEmail"
+                    style="@style/Theme.Instagram.FormEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/gray_text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/aLoginEditPasswordLayout"
+                style="@style/Theme.Instagram.FormEditTextLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aLoginEditEmailLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/aLoginEditPassword"
+                    style="@style/Theme.Instagram.FormEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/gray_text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.breno.instagram.common.view.LoadingButton
+                android:id="@+id/aLoginButtonEnter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aLoginEditPasswordLayout"
+                app:textLoading="@string/enter" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aLoginButtonEnter">
+
+                <View
+                    style="@style/Theme.Instagram.FormContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@color/gray_darker" />
+
+                <TextView
+                    style="@style/Theme.Instagram.TextViewBase"
+                    android:layout_gravity="center"
+                    android:background="?colorOnPrimary"
+                    android:padding="8dp"
+                    android:text="@string/or" />
+
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/aLoginRegisterTxtLogin"
+        style="@style/Theme.Instagram.TextViewBase"
+        android:background="?colorOnPrimary"
+        android:padding="24dp"
+        android:text="@string/does_not_have_account"
+        android:textAlignment="center"
+        android:textColor="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
